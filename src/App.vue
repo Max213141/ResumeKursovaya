@@ -14,7 +14,7 @@
           :data="part.textOffElement"
         ></component>
       </div>
-<!--      <component :is="app-try" :></component>-->
+
     </div>
   </div>
   <div class="container">
@@ -39,11 +39,11 @@ export default {
       resume:[
         {
           titleOfElement:'app-title',
-          textOffElement:'Suck my dick stupid bitch'
+          textOffElement:'Bla'
         },
         {
           titleOfElement:'app-text',
-          textOffElement:'Suck my dick'
+          textOffElement:'bla'
         },
         {
           titleOfElement:'app-avatar',
