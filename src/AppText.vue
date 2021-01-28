@@ -1,14 +1,14 @@
 <template>
   <div>
     <p>
-      {{data}}
+      {{text}}
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  props:['data']
+  props:['text']
 }
 </script>
 

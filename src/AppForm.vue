@@ -26,7 +26,7 @@ export default {
     return{
       typeOfInput: 'app-title',
       textArea: '',
-      resumeParts: []
+
     }
   },
   methods:{
@@ -35,9 +35,8 @@ export default {
         titleOfElement:this.typeOfInput,
         textOfElement:this.textArea
       }
-      this.resumeParts.push(resumePart)
-      const resumeParts=this.resumeParts
-      this.$emit('createResume', resumeParts)
+
+      this.$emit('createResume', resumePart)
       this.typeOfInput='app-title'
       this.textArea=''
     }

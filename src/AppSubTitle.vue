@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h2>{{ textOfElement }}</h2>
+    <h2>{{ text }}</h2>
   </div>
 </template>
 
 <script>
 export default {
-  props:['textOfElement']
+  props:['text']
 }
 </script>
 

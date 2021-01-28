@@ -6,12 +6,14 @@
     ></app-form>
     <div class="card card-w70" id="#resume">
       <h3 v-if="resume.length===0">Добавьте первый блок, чтобы увидеть результат</h3>
-      <div v-else v-for="(part, i) in resume" :key="i"
+      <div v-else
       >
-        <component
 
+        <component
+          v-for="(part, i) in resume"
+          :key="i"
           :is="part.titleOfElement"
-          :data="part.textOffElement"
+          v-bind="{text:part.textOfElement}"
         ></component>
       </div>
 
@@ -36,26 +38,14 @@ export default {
   data(){
     return{
       hideAlert:false,
-      resume:[
-        {
-          titleOfElement:'app-title',
-          textOffElement:'Bla'
-        },
-        {
-          titleOfElement:'app-text',
-          textOffElement:'bla'
-        },
-        {
-          titleOfElement:'app-avatar',
-          textOffElement:'https://sun1.beltelecom-by-minsk.userapi.com/impg/2w6BvbSsBrlqunG9V4dx__xawryIEXP-c_yt8g/8p3yb1Dn474.jpg?size=200x0&quality=96&crop=3,3,748,748&sign=0806743d4d8c6898e916cf980fa29fbc&ava=1'
-        }],
+      resume:[],
       part:''
     }
   },
   methods:{
     resumeHandler(data){
       console.log(data)
-      this.resume=data
+      this.resume.push(data)
       console.log(this.resume)
     }
   },
